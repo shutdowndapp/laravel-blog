@@ -9,7 +9,7 @@
 @endif
 @if( Session::has('success') )
     <section class="info-box success">
-        {{ Success::get('success') }}
+        {{ Session::get('success') }}
     </section>
 @endif
 @if (count($errors) > 0)
