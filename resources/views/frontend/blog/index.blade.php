@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Blog Index
+    Blog Index test
 @endsection
 
 @section('styles')
