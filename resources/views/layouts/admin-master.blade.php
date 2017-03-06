@@ -12,7 +12,8 @@
     @yield('content')
 
     <script>
-        var baseUrl = "{{ URL::to('/') }}"
+        var baseUrl = "{{ URL::to('/') }}";
+        console.log(baseUrl);
     </script>
     @yield('scripts')
 </body>

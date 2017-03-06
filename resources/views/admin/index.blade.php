@@ -55,25 +55,28 @@
             </header>
             <section>
                 <ul>
-                    {{-- if no Message      --}}
-                    <li>No Message</li>
-                    {{-- if Message --}}
-                    <li>
-                        <article data-message="Body" data-id="ID">
-                            <div class="message-info">
-                                <h3>Message subject</h3>
-                                <span class="info">seeder ... | Date</span>
-                            </div>
-                            <div class="edit">
-                                <nav>
-                                    <ul>
-                                        <li><a href="">View</a></li>
-                                        <li><a href="" class="danger">Delete</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </article>
-                    </li>
+                    @if (count($contact_messages) == 0)
+                        <li>No Messages</li>
+                    @endif
+                    @foreach($contact_messages as $contact_message)
+                          <li>
+                                <article data-message="{{$contact_message->body}}" data-id="{{$contact_message->id}}">
+                                    <div class="message-info">
+                                        <h3>{{ $contact_message->subject }}</h3>
+                                        <span class="info">Sender:{{$contact_message->sender}} | {{$contact_message->created_at}}</span>
+                                    </div>
+                                    <div class="edit">
+                                        <nav>
+                                            <ul>
+                                                <li><a href="">View</a></li>
+                                                <li><a href="" class="danger">Delete</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </article>
+                            </li>
+                    @endforeach
+                  
                 </ul>
             </section>
         </div>
@@ -88,5 +91,5 @@
         var token = "{{ csrf_token() }}";
     </script>
     <script src="{{ URL::to('src/js/modal.js') }}"></script>
-    <script src="{{ URL::to('src/js/contact_message.js') }}"></script>
+    <script src="{{ URL::to('src/js/contact-message.js') }}"></script>
 @endsection

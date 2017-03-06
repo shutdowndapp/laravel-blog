@@ -18,8 +18,11 @@
             </div>
              <div class="input-group">
                 <label for="category_select">Add Categories</label>
-                <select name="caetgory" id="category_select">
-                    <option value="Dumy Category ID">Dumy Category</option>
+                <select name="caetgory_select" id="category_select">
+                    {{-- <option value="Dumy Category ID">Dumy Category</option> --}}
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
                 </select>
                 <button type="button" class="btn">Add Category</button>
                 <div class="added-categories">
