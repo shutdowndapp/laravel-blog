@@ -12,7 +12,7 @@
                 <input type="text" id="email" name="email" {{ $errors->has('email') ? 'class=has-error' : '' }} value="{{ Request::old('email') }}">
             </div>
             <div class="input-group">
-                <label for="password">E-mail</label>
+                <label for="password">密码</label>
                 <input type="password" id="password" name="password" {{ $errors->has('password') ? 'class=has-error' : '' }}>
             </div>
             <button type="submit" class="btn">Login</button>

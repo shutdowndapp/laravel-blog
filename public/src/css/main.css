@@ -1,30 +1,30 @@
 body {
     font-size: 16px;
     font-family: "Roboto", Arial, sans-serif;
+    background: #ebebeb;
     padding: 0;
     margin: 0;
 }
 
 a {
-    color: #ad67d2;
+    color: #f4645f;
     text-decoration: none;
 }
 
 a:hover,
 a:active {
-    color: #8900c6;
+    color: #f4645f;
 }
 
 h3 {
     margin: 0;
 }
 
-.main {
-    width: 700px;
+main {
     margin: 32px auto;
 }
 
-
+/*
 .btn {
     display: inline-block;
     box-sizing: border-box;
@@ -53,7 +53,12 @@ h3 {
     background-color: white;
     color: #8900c6;
 }
-
+*/
+.btn-success {
+    color: #fff;
+    background-color: #f4645f;
+    border-color: #f4645f;
+}
 /* Social slider */
 .social-slider {
     width: 50px;
@@ -61,7 +66,7 @@ h3 {
     position: fixed;
     left: 0;
     top: 25vh;
-    background-color: #ad67d2;
+    background-color: #f4645f;
     box-shadow: 1px 1px 1px darkgray;
 }
 
@@ -71,17 +76,15 @@ h3 {
     box-shadow: 0px 2px 2px lightgray;
     text-align: center;
     font-size: 28px;
-    background-color: #ad67d2;
+    background-color: #f4645f;
 }
 
-.main-nav ul,
 .main-footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.main-nav ul li,
 .main-footer ul li {
     display: inline-block;
     padding: 32px 16px;
@@ -98,12 +101,12 @@ h3 {
 }
 
 .main-nav li:hover a {
-    color: #ad67d2;
+    color: #f4645f;
 }
 
 .main-nav a:hover,
 .main-nav a:active {
-    color: #ad67d2;
+    color: #f4645f;
 }
 
 .active {
@@ -111,27 +114,32 @@ h3 {
 }
 
 .active a {
-    color: #ad67d2;
+    color: #f4645f;
 }
 
 /* Footer */
 .main-footer {
-    padding: 32px;
     text-align: center;
     font-size: 14px;
+    width: 100%;
+    background: #111;
+    color: #555555;
 }
 
 /* Blog posts etc. */
 .blog-post {
-    border: 2px solid #ad67d2;
+    border: 2px solid #f4645f;
+    background: #fff;
     border-radius: 8px 0 8px 8px;
     padding: 16px;
     margin-bottom: 32px;
 }
 
-.subtitle {
-    color: darkgrey;
+.post-meta {
+    color: #959595;
+    margin: 14px 0px;
     font-size: 14px;
+    text-align: center;
 }
 
 .pagination {
