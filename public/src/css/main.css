@@ -95,6 +95,11 @@ main {
     background-color: white;
 }
 
+.main-nav-active {
+    background-color: #eee;
+    color: #f4645f !important;
+}
+
 .main-nav a {
     color: white;
     transition: all 0.2s;
